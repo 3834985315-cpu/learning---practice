@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>若叶睦 Mujica 吉他手美图站</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <p class="tag">Mujica Guitar Gallery</p>
+        <h1>若叶睦 · 吉他手美图投稿站</h1>
+        <p class="desc">上传你收藏的美图，和大家一起分享属于 Mujica 的舞台瞬间。</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card form-card">
+        <h2>提交美图</h2>
+        <form id="uploadForm">
+          <label>
+            图片标题
+            <input id="titleInput" type="text" placeholder="例如：舞台灯光下的若叶睦" required />
+          </label>
+
+          <label>
+            图片说明（可选）
+            <textarea id="descInput" rows="3" placeholder="说说你喜欢这张图的理由..."></textarea>
+          </label>
+
+          <label>
+            选择图片文件
+            <input id="fileInput" type="file" accept="image/*" required />
+          </label>
+
+          <button type="submit">提交到画廊</button>
+          <p id="msg" class="msg"></p>
+        </form>
+      </section>
+
+      <section class="card gallery-card">
+        <div class="gallery-head">
+          <h2>美图画廊</h2>
+          <small>你提交的图片会保存在当前浏览器会话中</small>
+        </div>
+        <div id="gallery" class="gallery"></div>
+      </section>
+    </main>
+
+    <template id="itemTemplate">
+      <article class="item">
+        <img alt="投稿图片" />
+        <div class="meta">
+          <h3></h3>
+          <p></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
